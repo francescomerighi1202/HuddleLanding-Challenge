@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+
+    --ff-headings: 'Poppins', sans-serif;
+    --fw-h-400: 400;
+    --fw-h-600: 600;
+
+    --ff-body: 'Open Sans', sans-serif;
+    --fw-b-400: 400;
+}
+
+body {
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--violet);
+    padding: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main__content {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.main__image {
+    width: 50%;
+}
+
+.main__description {
+    width: 50%;
+}
+
+.main__title {
+    font-family: var(--ff-headings);
+    font-size: 2.5rem;
+    color: white;
+    font-weight: var(--fw-h-600);
+}
+
+.main__text {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-b-400);
+    color: white;
+    font-size: 1.125rem;
+    opacity: .9;
+    margin-top: 1.5em;
+}
+
+.main__link {
+    text-decoration: none;
+    color: var(--violet);
+    padding: 1em;
+    margin-top: 1.5em;
+    width: 200px;
+    border-radius: 30px;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-b-400);
+    text-align: center;
+    display: block;
+    background-color: white;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.social__icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+    padding: 1em;
+}
+
+i {
+    color: white;
+    padding: 1em;
+    border-radius: 100px;
+    width: 55px;
+    text-align: center;
+    font-size: 1.125rem;
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
+}
+
+@media (max-width: 800px) {
+    
+    body {
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main__content {
+        flex-direction: column;
+    }
+
+    .main__image {
+        width: 80%;
+    }
+
+    .main__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__title {
+        font-size: 1.5rem;
+    }
+
+    .main__text {
+        width: 90%;
+    }
+
+    .social__icons {
+        justify-content: center;
+        margin-top: 5em;
+    }
+
+}
