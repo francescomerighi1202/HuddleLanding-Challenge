@@ -76,6 +76,12 @@ img {
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
 }
 
+.main__link:hover, .main__link:focus {
+    color: white;
+    background-color: var(--soft-magenta);
+    transition: .2s;
+}
+
 .social__icons {
     display: flex;
     justify-content: flex-end;
